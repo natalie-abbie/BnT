@@ -1,0 +1,43 @@
+{% extends "post/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+{% load static %}
+
+<div id="content-wrap">
+	<div id="sidebar">
+	 	  <!-- <h1>RULES TO ACCOUNT</h1> -->
+	  <ul class="sidemenu">
+		<li><strong>LOGIN OR CREATE AN ACCOUNT</strong> <br>to view details of the tender, prequalification or expression of interest and be able to participate in the bidding process. <br> Logged in users have access to the bid detai notice, bid advert and other bidding documents required for the process </p>
+		<li><strong>AS LOGGED IN USER,</strong> <br>You have access to as well post a job or tender advert as a budget free cost that will gain visible and interactive actions</p>
+	  </ul>
+  
+	  <h1>Ads</h1>
+	  <a href="#"><img src="{%static 'world-map.jpg'%}" width="95%" height="40%" alt="firefox" /></a>  
+	</div>
+  
+	<div id="main"> <a name="TemplateInfo">
+		<div class ="content-section">
+			<form method="POST" class="account-form">
+				{% csrf_token %}
+				<fieldset class="form-group">
+					<legend class="border-bottom mb-4">Log In</legend>
+					{{ form|crispy }}
+	
+					<div class="form-group">
+						<button class="btn btn-outline-info" style="background-color: #EAC117;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;cursor: pointer;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);position: relative;bottom: 0px;" type="submit">Log In</button>
+						<small class="text-muted ml-2">
+							<a href="{% url 'password-reset' %}">Forgot Password?</a>
+						</small>
+					</div>
+					<div class="border-top pt-3">
+						<small class="text-muted">
+							Don't Have An Account? <a class="ml-2" href="{% url 'user-register' %}">Create Account</a>
+						</small>
+					</div>
+				</fieldset>
+				
+			</form>
+			
+		</div>
+	{% endblock content %}
+	

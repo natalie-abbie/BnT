@@ -1,0 +1,91 @@
+{% extends "post/base.html" %}
+{% block content %}
+<div class="wrapper">
+  <input type="text" id="myInput" onkeyup="mySearch()" placeholder="Search for names..">
+  </div>
+  <!-- 
+    <div class="right">
+    <section class="media content-section" style="border: 1px solid;border-color: #999999;border-radius: 5px;padding: 10px">
+      <div> 
+        <span style="padding: 10px;"><b>Sort By:</b></span>
+      </div>
+          <ul class="cards">
+            <li>
+              <a href="{% url 'advert-home' 'hours' %}" style="text-decoration: none;color: #444444">Op.Time
+                <span id="quantity" onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'" class="glyphicon glyphicon-sort-by-order">       
+                </span>
+              </a>
+            </li>
+  
+            <li>
+              <a href="{% url 'advert-home' 'name' %}" style="text-decoration: none;color: #444444">Alphabet...
+                <span id="quantity" onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'" class="glyphicon glyphicon-sort-by-alphabet">
+                </span>
+              </a>
+            </li>
+  
+            <li>
+              <a href="{% url 'advert-home' 'date_posted' %}" style="text-decoration: none;color: #444444">Date
+                <span id="quantity" onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'" class="glyphicon glyphicon-sort-by-attributes">
+                 </span>
+              </a>
+            </li>
+          </ul>
+    </section>
+   -->
+   <div class=" post-info">
+    <table border = "2" cellpadding = "7" cellspacing = "7" class="table-data" >
+      <thead>
+        <tr>
+          <th>Organization</th>
+          <th>Job Title</th>
+          <th>Duty Staion</th>
+          <th>Submission Mode</th>
+          <th>Deadline Date</th>
+          <th>Deadline Time</th>
+          <th>View details</th>
+        </tr>
+      </thead>
+      {% for advert in adverts %}
+        <tr>
+          <td><img src="{{ advert.image.url }}" style="height: 100px;width: 100px;padding: 0px 10px 10px 0px;float: left;" ></td>
+          <td><a href="{% url 'advert-detail' advert.id %}"><b>{{ advert.name }}</b></a></td>
+          <td>{{ advert.address}}</td>
+          <td>
+            {% for product in advert.products.all %}
+                {{ product }}
+              {% endfor %}
+          </td>
+          <td>{{ post.date_posted|date:"F d, Y" }}</td>
+          <td>{{advert.hours}}</td>
+          <td><a href="{% url 'advert-detail' advert.id %}"><button style="background-color: #EAC117;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;cursor: pointer;float: right;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);position: relative;bottom: 0px;"><b>Details</b></button></a></td>
+        </tr>
+    {% endfor %}
+    </table>
+  
+      {% if is_paginated %}
+
+      {% if page_obj.has_previous %}
+        <a class="btn btn-outline-info mb-4" href="?page=1"><<</a>
+        <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}"><</a>
+      {% endif %}
+
+      {% for num in page_obj.paginator.page_range %}
+        {% if page_obj.number == num %}
+          <a class="btn btn-info mb-4" href="?page={{ num }}">{{ num }}</a>
+        {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+          <a class="btn btn-outline-info mb-4" href="?page={{ num }}">{{ num }}</a>
+        {% endif %}
+      {% endfor %}
+
+      {% if page_obj.has_next %}
+        <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}">></a>
+        <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">>></a>
+      {% endif %}
+
+    {% endif %}
+  </div>
+</div>
+{% endblock content %}
+
+

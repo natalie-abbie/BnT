@@ -1,0 +1,40 @@
+{% extends "post/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+{% load static %}
+
+<div id="content-wrap">
+	<div id="sidebar">
+	 	  <h1>RULES TO ACCOUNT</h1>
+	  <ul class="sidemenu">
+		<li><strong>GENUINE JOB ADVERT </strong> is a procurement type of bidding which is specific to the requirements or specifications offered by the end use/ client. Tenders are run for a specific project and evaluated within a short period of time. There are requirements that are needed in preparing a tender </p>
+		<li><strong>PAYMENT PER ADVERT POSTED</strong> are majorly prepare more than tenders. This is because a company needs to provide the required valid documentation to be approved by the procurement committtee before a company is involved into business with the company. There are requirements that are needed in preparing a tender </p>
+	  </ul>
+  
+	  <h1>Ads</h1>
+	  <a href="#"><img src="{%static 'world-map.jpg'%}" width="95%" height="40%" alt="firefox" /></a>  
+	</div>
+  
+	<div id="main"> <a name="TemplateInfo">
+		<div class ="content-section">
+			<form method="POST" class="account-form">
+				{% csrf_token %}
+				<fieldset class="form-group">
+					<legend class="border-bottom mb-4">Create Account</legend>
+					{{ form|crispy }}
+	
+					<div class="form-group">
+						<button class="btn btn-outline-info" style="background-color: #EAC117;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;cursor: pointer;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);position: relative;bottom: 0px;" type="submit">Sign Up</button>
+					</div>
+					<div class="border-top pt-3">
+						<small class="text-muted">
+							Already Have An Account? <a class="ml-2" href="{% url 'user-login' %}">Sign In</a>
+						</small>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	{% endblock content %}
+	
+	
+
