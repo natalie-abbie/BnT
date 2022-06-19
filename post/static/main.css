@@ -42,6 +42,7 @@ html {
 .container {
   position: relative;
   overflow: hidden;
+
   /* border-radius: 5rem; */
 }
 
@@ -70,10 +71,20 @@ html {
   transition: all 0.25s ease-in;
   transform: translateX(0);
 }
-@media only screen and (max-width: 1000px) {
-  .slider {
-    height: 100vh;
+@media only screen and (max-width: 450px) {
+  .slider  {
+    height: 40vh;
   }
+
+  .slider .box .details p {
+    font-size: 5px;
+  }
+
+  .details  {
+    margin-top: 30%;
+    color: #fff;
+  }
+
 }
 .slider .box {
   height: 100%;
@@ -85,11 +96,15 @@ html {
   position: relative;
 }
 @media only screen and (max-width: 650px) {
-  .slider .box {
+.slider .box {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
+    /* height: 40%; */
   }
 }
+
+
+
 .slider .box .bg {
   padding: 2rem;
   background-color: #2180BC;
@@ -102,6 +117,8 @@ html {
   padding-left: 20rem;
   transform-origin: 0 100%;
 }
+
+
 @media only screen and (max-width: 800px) {
   .slider .box .bg {
     width: 65%;
@@ -148,10 +165,11 @@ html {
     text-align: center;
     padding: 2rem;
     transform: translateY(-9rem);
+    
   }
 }
 .slider .box .details h1 {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 500;
   margin-bottom: 0.5rem;
 }
@@ -236,27 +254,7 @@ html {
   position: relative;
   transform: skewX(-10deg);
 }
-@media only screen and (max-width: 800px) {
-  .slider .illustration div {
-    height: 20rem;
-    width: 15rem;
-  }
-}
-.slider .illustration div::after, .slider .illustration div::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  border-radius: 3rem;
-  top: 0;
-  left: 0;
-}
-.slider .illustration div::after {
-  transform: translate(4rem, -1rem);
-}
-.slider .illustration div::before {
-  transform: translate(2rem, -2rem);
-}
+
 
 .prev,
 .next,
@@ -309,7 +307,7 @@ html {
 @media only screen and (max-width: 650px) {
   .trail {
     width: 90%;
-    bottom: 13%;
+    /* bottom: 5%; */
   }
 }
 .trail div {
@@ -553,7 +551,8 @@ input.button {
 #wrap {
 	width:100%;
 	/* margin: 0 auto; */
-	text-align: left;
+	text-align: center;
+  
 }
 #content-wrap {
 	clear: both;
@@ -569,6 +568,8 @@ input.button {
 	background-color: #1773BC;
 	padding: 0;	
 	color: #FFF;
+
+  
 }
 #header h1#logo-text {
 	position: absolute;
@@ -578,6 +579,7 @@ input.button {
 	color: #FFF;
 	text-transform: none;
 	top: 20px; left: 45px;	
+  
 }
 #header h2#slogan {
 	position: absolute;
@@ -594,6 +596,7 @@ input.button {
 	top: 20px; right: 30px;	
 	color: #C6DDEE;
 	font-size: 12px;	
+  justify-content: center;
 }
 #header #header-links a {	
 	color: #FFF;
@@ -779,16 +782,16 @@ input.button {
 .pagination{
     margin-top: 5px;
     margin-bottom: 5px;
-    margin-left: 10%;
-    margin-right: 10%;
+    /* margin-left: 10%;
+    margin-right: 10%; */
 }
 }
 
 .pagination{
-  margin-top: 20px;
+  margin-top: 0px;
   margin-bottom: 20px;
-  margin-left: 30%;
-  margin-right: 30%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .pagination a{

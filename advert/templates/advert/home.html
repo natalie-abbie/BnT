@@ -7,46 +7,9 @@
 
   <div id="demo">
     <h1>JOBS, CAREER AND OPPORTUNITES</h1>
-    <h2>Find a job that suits your desire and experience </h2>
+    <!-- <h2>Find a job that suits your desire and experience </h2> -->
     </div>
-  
-<div id="content-wrap">
-  <div id="sidebar">
-  
-    <h1>Ads</h1>
-    <a href="#"><img src="{%static 'world-map.jpg'%}" width="95%" height="40%" alt="firefox" /></a>
 
-    <h1>CAREER PLACEMENTS</h1>
-    <ul class="sidemenu">
-      <li><strong>Career </strong> services that can lead you to your job desire </p>
-      
-    </ul>
-
-    <h1>Ads</h1>
-    
-      <div class="motion-items" >
-        <marquee style="display:inline-bock;">
-        <li>tenders</li>
-        <li>prequalifications</li>    
-    </marquee>
-  </div>
-    
-
-    <h1>OPPORTUNITES</h1>
-    <ul class="sidemenu">
-      <li><a href="#"><strong>JOB ADVERTS</strong></a> <br />
-        We provide you with genuine job adverts that help you get informed</li>
-      <li><a href="#"><strong>O</strong></a> <br />
-        Do you have a requirement that you cant find, we do help get your work do</li>
-      <li><a href="#"><strong>ADVERTISEMENTS</strong></a> <br />
-        We do run publish your advertises to the site for more audience views</li>
-    </ul>
-
-    <!-- <h1>Ads</h1>
-    <a href="#"><img src="{%static 'world-map.jpg'%}" width="95%" height="40%" alt="firefox" /></a>   -->
-  </div>
-
-  <div id="main"> <a name="TemplateInfo"></a>
     <section class="body-cont">
       <div class="main-table">
       
@@ -76,7 +39,7 @@
                   </td>
                   <!-- <td>{{ post.date_posted|date:"F d, Y" }}</td> -->
                   <td>{{advert.hours}}</td>
-                  <td><a href="{% url 'advert-detail' advert.id %}"><button style="background-color: #EAC117;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;cursor: pointer;float: right;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);position: relative;bottom: 0px;"><b>Details</b></button></a></td>
+                  <td><a href="{% url 'advert-detail' advert.id %}"><button style="background-color: #EAC117;color: white;padding: 10px 30px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;cursor: pointer;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);position: relative;bottom: 0px;"><b>Details</b></button></a></td>
                 </tr>
             {% endfor %}
           </tbody>
@@ -108,6 +71,45 @@
       <!-- ads -->
     </div>
   </section>
+  
+<div id="content-wrap">
+  <div id="sidebar">
+  
+    <h1>Ads</h1>
+    <a href="#"><img src="{%static 'world-map.jpg'%}" width="95%" height="40%" alt="firefox" /></a>
+
+    <h1>CAREER PLACEMENTS</h1>
+    <ul class="sidemenu">
+      <li><strong>Career </strong> services that can lead you to your job desire </p>
+      
+    </ul>
+
+    <h1>Ads</h1>
+    
+      <div class="motion-items" >
+        <marquee style="display:inline-bock;">
+        <li>tenders</li>
+        <li>prequalifications</li>    
+    </marquee>
+  </div>
+    
+
+    
+
+    <!-- <h1>Ads</h1>
+    <a href="#"><img src="{%static 'world-map.jpg'%}" width="95%" height="40%" alt="firefox" /></a>   -->
+  </div>
+
+  <div id="main"> <a name="TemplateInfo"></a>
+    <h1>OPPORTUNITES</h1>
+    <ul class="sidemenu">
+      <li><a href="#"><strong>JOB ADVERTS</strong></a> <br />
+        We provide you with genuine job adverts that help you get informed</li>
+      <li><a href="#"><strong>O</strong></a> <br />
+        Do you have a requirement that you cant find, we do help get your work do</li>
+      <li><a href="#"><strong>ADVERTISEMENTS</strong></a> <br />
+        We do run publish your advertises to the site for more audience views</li>
+    </ul>
   {% endblock content %}
   
     

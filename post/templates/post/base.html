@@ -22,11 +22,12 @@
 <body style="background-image: url('{% static 'business-w1.jpg'%}');background-attachment:fixed; background-size: cover; ">
 <div id="wrap">
   <div id="header">
-    <h1 id="logo-text">Biz n' Tenders</h1>
-    <h2 id="slogan">Have your tried bidding for business</h2>
-    <div id="header-links">
-      <p> <a href="{%url 'home'%}">Home</a> | <a href="#">Contact</a> | <a href="{% url 'post-about' %}">Blog</a> </p>
-    </div>
+	 <h1 id="logo-text"><a href="{%url 'home'%}" style="color:#fff">Biz n' Tenders</a></h1>
+    <h2 id="slogan">Business development soultions</h2>
+	<!-- <div id="header-links">
+		<p> <a href="{%url 'home'%}">Home</a> | <a href="#">Contact</a> | <a href="{% url 'post-about' %}">Blog</a> </p>
+	  </div> -->
+    
   </div>
 
   <div  id="menu">
@@ -64,7 +65,7 @@
 
   
   <div id="footer">
-    <p> &copy; 2022 <strong>B n' T</strong> | Design by: <a href="#">biz n' tenders</a> | <a href="#">CSS</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#">Home</a>&nbsp;|&nbsp; <a href="#">Sitemap</a>&nbsp;|&nbsp; <a href="#">Feed</a> </p>
+    <p> &copy; 2022 <strong>B n' T</strong> | Design by: biz n' tenders | <a href="#">contact us</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="{%url 'home'%}">Home</a>&nbsp;|&nbsp; <a href="{% url 'post-about' %}">Blog</a>&nbsp;|&nbsp; <a href="#">Feed</a> </p>
   </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
