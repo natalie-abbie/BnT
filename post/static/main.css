@@ -268,7 +268,7 @@ html {
   width: 4rem;
   cursor: pointer;
   opacity: 0.2;
-  transition: all 0.3s ease;
+  transition: all 5s ease;
 }
 @media only screen and (max-width: 650px) {
   .prev,
@@ -490,8 +490,6 @@ input.button {
 
 /* account form */
 .account-form{
-	margin-left: 10%;
-	margin-right: 10%;
 	border-radius: 10px;
 	opacity:0.9;
 }
