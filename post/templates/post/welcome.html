@@ -9,10 +9,10 @@
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
     <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
-	<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
-	<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
-	<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3444596717437369" crossorigin="anonymous"></script>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});   </script> -->
+	<!-- <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+	<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script> -->
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3444596717437369" crossorigin="anonymous"></script>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});   </script>
 	<script src="{%static 'script.js'%}"></script>
 
     {% if title %}
@@ -21,6 +21,43 @@
 		<title>businessandtenders</title>
 	{% endif %}
 </head>
+<script>
+	var url = 'https://wati-integration-service.clare.ai/ShopifyWidget/shopifyWidget.js?41974';
+	var s = document.createElement('script');
+	s.type = 'text/javascript';
+	s.async = true;
+	s.src = url;
+	var options = {
+  "enabled":true,
+  "chatButtonSetting":{
+	  "backgroundColor":"#4dc247",
+	  "ctaText":"message us",
+	  "borderRadius":"25",
+	  "marginLeft":"0",
+	  "marginBottom":"50",
+	  "marginRight":"50",
+	  "position":"left"
+  },
+  "brandSetting":{
+	  "brandName":"Bn'T",
+	  "brandSubTitle":"Typically replies within a day",
+	//   "brandImg":"https://cdn.clare.ai/wati/images/WATI_logo_square_2.png",
+	  "welcomeText":"Hi there!\nHow can we help you?",
+	  "messageText":"Hello, I have a question about ...",
+	  "backgroundColor":"#0a5f54",
+	  "ctaText":"Start Chat",
+	  "borderRadius":"25",
+	  "autoShow":false,
+	  "phoneNumber":"256752030815"
+  }
+  };
+	s.onload = function() {
+		CreateWhatsappChatWidget(options);
+	};
+	var x = document.getElementsByTagName('script')[0];
+	x.parentNode.insertBefore(s, x);
+  </script>
+  
 <body>
 <div id="wrap">
   <div id="header">
@@ -148,12 +185,56 @@
 
 	
 <!-- slider end -->
-
 <div class="container">
 	<div class="sec-title">
+		<h2 class="center">Welcome to Bn'T</h2>
+		<p>We ar web based tendering tool that takes advantage of the many benefits that digital data offers. Bids are sealed and can only be viewed by authorised parties cutting down on project time, tender period and reducing risk and cost. Good governance, transparency, system integrity and efficiency will be the results after the Bn'T system embeds in your organisation.</p>
+	</div>
+</div>
+
+<!-- column -->
+
+
+<div class="row">
+  <div class="column"">
+    <div class="sec-title">
 		<h2 class="center">About Business & Tenders</h2>
 		<p>We are an online supplier sourcing platform that provides businesses with procurement processes by identifying bidding activities like Tender adverts, prequalification adverts, Ecpressions of Interest and Request for Proposals <br> We not only provide business with supplier information but also provide career, jobs and opportunities for every one</p>
+		<a href="#"><img src="{%static 'world-map.jpg'%}" width="95%" height="40%" alt="firefox" /></a>
 	</div>
+  </div>
+  
+  <div class="column">
+    <section class="whyus">
+		<h1></h1>
+		<ol class="ol-cards alternate" >
+			<li style="--ol-cards-color-accent:#f68121">
+				<div class="step"><i class="fab fa-codepen"></i></div>
+				<div class="title">We Value our clients:</div>
+				<div class="content">Quality work is a prerequisite for every task we undertake at Bn'T. as we consider that "every day counts". And why not; we know that good jobs always bring new clients.</div>
+			</li>
+			<li style="--ol-cards-color-accent:#ed1c24">
+				<div class="step"><i class="fab fa-github"></i></div>
+				<div class="title">We believe in Quality:</div>
+				<div class="content">Excellence and consistency quality at low cost is what drives outsourcing business. And we play by the rules of the game </p>
+				</p>
+				</div>
+			</li>
+			<li style="--ol-cards-color-accent:#582c8b">
+				<div class="step"><i class="fab fa-html5"></i></div>
+				<div class="title">We value our people: </div>
+				<div class="content">We highly value our people and their performance. Bn'T ensures providing an environment to develop their skills and offers them a rewarding career.</div>
+			</li>
+	
+			</li>
+		</ol>
+	  </section>
+  </div>
+</div>
+
+
+
+
 
 	<div class="servs-container">
 	<div class="servs">
