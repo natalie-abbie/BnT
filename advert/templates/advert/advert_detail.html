@@ -6,28 +6,58 @@
   <div id="sidebar">
   
     <h1>Ads</h1>
-    <a href="#"><img src="{%static 'world-map.jpg'%}" width="95%" height="40%" alt="firefox" /></a>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3444596717437369"
+	   crossorigin="anonymous"></script>
+	  <ins class="adsbygoogle"
+		  style="display:block; width: 20%;"
+		  data-ad-client="ca-pub-3444596717437369"
+		  data-ad-slot="9260199698"
+		  data-ad-format="auto"
+		  data-full-width-responsive="true"></ins>
+	  <script>
+		 (adsbygoogle = window.adsbygoogle || []).push({});
+	  </script>
     <h1>Ads</h1>
-    <a href="#"><img src="{%static 'world-map.jpg'%}" width="95%" height="40%" alt="firefox" /></a>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3444596717437369"
+	   crossorigin="anonymous"></script>
+	  <ins class="adsbygoogle"
+		  style="display:block; width: 20%;"
+		  data-ad-client="ca-pub-3444596717437369"
+		  data-ad-slot="9260199698"
+		  data-ad-format="auto"
+		  data-full-width-responsive="true"></ins>
+	  <script>
+		 (adsbygoogle = window.adsbygoogle || []).push({});
+	  </script>
 
     <h1>Ads</h1>
-    <a href="#"><img src="{%static 'world-map.jpg'%}" width="95%" height="40%" alt="firefox" /></a>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3444596717437369"
+	   crossorigin="anonymous"></script>
+	  <ins class="adsbygoogle"
+		  style="display:block; width: 20%;"
+		  data-ad-client="ca-pub-3444596717437369"
+		  data-ad-slot="9260199698"
+		  data-ad-format="auto"
+		  data-full-width-responsive="true"></ins>
+	  <script>
+		 (adsbygoogle = window.adsbygoogle || []).push({});
+	  </script>
       
   </div>
 
 <div id="main"> <a name="TemplateInfo"></a>
-<div>
-    <!-- <div id="googleMap" style="width:100%;height:400px;"></div> -->
+  <section class="advert-page">
+<div >
     <br>
-	  <img src="{{ advert.image.url }}" style="height: 250px;width: 250px;padding: 0px 10px 10px 0px" align="left">
-      <h3 style="display: inline;"><span style="float: right" class="label label-success">4.1</span>
+	  <img src="{{ advert.image.url }}" style="height: 100px;width: 100px;padding: 0px 10px 10px 0px" align="left">
+      <!-- <h3 style="display: inline;"><span style="float: right" class="label label-success">4.1</span>
 		  {% if advert.author == user  %}
 		      <div>
 		      	<a class="btn btn-secondary btn-sm mb-1 mt-1" href="{% url 'advert-update' advert.id %}">Update</a>
 		      	<a class="btn btn-danger btn-sm mb-1 mt-1" href="{% url 'advert-delete' advert.id %}">Delete</a>
 		      </div>
 	      {% endif %}
-      </h3>
+      </h3> -->
 
       <div>
         <b style="color: black;font-size: 20px">{{ advert.name }}</b>
@@ -65,9 +95,7 @@
           </td>
         </tr>
        </table>
-</div>
-
-<div class="article-content" style="float: left;">
+<div class="advert-details">
   <b>Bio:</b>{{ advert.details }}</p>
 </div>
 	<!-- <article class="media content-section">
@@ -88,7 +116,10 @@
 	    <p class="article-content">{{ advert.author }}</p>
 	  </div>
 	</article>  -->
-{% endblock content %}
 </div>
+{% endblock content %}
+</section>
+</div>
+
 
 
