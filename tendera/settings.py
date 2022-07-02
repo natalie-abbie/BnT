@@ -3,15 +3,16 @@ from dotenv import load_dotenv, find_dotenv
 
 load_dotenv(find_dotenv())
 
-SECRET_KEY = os.environ['SECRET_KEY']
+# SECRET_KEY = os.environ['SECRET_KEY']
 
+SECRET_KEY = '&kewjequ#j1k+te+%6yhqf3803+ik@@cq(ke50xs+#j0gv($i1'
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1:8000','businessandtenders.com','www.businessandtenders.com']
 
 
 # Application definition
@@ -110,8 +111,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR+"/static",]
-MEDIA_ROOT = os.path.join(BASE_DIR, '/home/businessand/public_html/static')
+# STATICFILES_DIRS = [BASE_DIR+"/static",]
+STATIC_ROOT = os.path.join(BASE_DIR, '/home/businessand/public_html/static')
 
 
 MEDIA_ROOT = os.path.join(BASE_DIR, '/home/businessand/public_html/media')
